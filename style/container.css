@@ -2,17 +2,21 @@ div#container {
 
     display: flex;
     flex-direction: row;
+    gap: 200px;
 
     section#intro {
         
         display: flex;
         flex-direction: column;
         gap: 50px;
-        margin: 0px 50px 0px 0px;
-        padding: 0px 50px 0px 0px;
+        padding: 0;
         width: 508px;
+        
 
         div#header {
+
+            text-wrap: wrap;
+            
             h3 {
                 font: var(--overline);
                 color: var(--content-secondary);
@@ -20,18 +24,14 @@ div#container {
 
             p {
                 font: var(--display-large);
+                text-transform: uppercase;
+                span {
+                    text-wrap: nowrap;
+                }
             }
         }
-    }
 
-    section#numberDraw {
-        background-color: rgb(34, 230, 230);
-        margin: 0px 0px 0px 50px;
-        padding: 0px 0px 0px 50px;
-        width: 508px;
-    }
-
-    div.questions {
+        div.questions {
         display: flex;
         flex-direction: row;
         align-items: start;
@@ -52,7 +52,85 @@ div#container {
                 font: var(--paragraph-small);
                 color: var(--content-secondary);
             }
+            }
         }
+
+    }
+
+
+    section#numberDraw {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 482px;
+        padding-top: 35px;
+
+        div#infos {
+            h3 {
+                font: var(--label-large);
+            }
+            p {
+                font: var(--paragraph-large);
+                color: var(--content-secondary);
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            div#inputs {
+
+                display: flex;
+                gap: 20px;
+
+                div.input {
+                    display: flex;
+                    flex-direction: column;
+                    width: 20%;
+                    text-align: center;
+
+                    label {
+                        font: var(--label-medium);
+                        color: var(--content-secondary);
+                        text-transform: uppercase;
+                    }
+
+                    input {
+                        height: 56px;
+                        background-color: var(--background-secondary);
+                        border: none;
+                        border-radius: 10px;
+                        color: var(--content-primary);
+                        text-align: center;
+                        padding-left: 15px;
+                        font: var(--display-small);
+                        
+                    }
+                }
+            }
+        }
+
+
+        button {
+            text-transform: uppercase;
+            background-color: var(--background-tertiary);
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            height: 56px;
+            font: var(--label-medium);
+            color: var(--content-primary);
+
+            img {
+                position: relative;
+                top: 6px;
+            }
+        }
+
+        
     }
 
 }

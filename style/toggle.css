@@ -1,0 +1,71 @@
+.hidden-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+    /* Ensures it doesn't take up space */
+}
+
+.toggle-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    /* Adjust as needed */
+    height: 34px;
+    /* Adjust as needed */
+    background-color: var(--background-gray);
+    border-radius: 34px;
+    /* For a rounded switch */
+    cursor: pointer;
+    transition: background-color 0.4s;
+    text-wrap: nowrap;
+    
+}
+
+.toggle-label::after {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.4s;
+}
+
+.hidden-checkbox:checked+.toggle-label {
+    background-color: var(--background-brand);
+    /* Color when toggled on */
+}
+
+.hidden-checkbox:checked+.toggle-label::after {
+    transform: translateX(26px);
+    /* Move the knob */
+}
+
+/* Example of toggling content visibility */
+.hidden-content {
+    display: none;
+    /* Hidden by default */
+}
+
+.hidden-checkbox:checked~#contentToToggle {
+    display: block;
+    /* Show when toggled on */
+}
+
+
+.toggle-container {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  gap: 12px; /* Espaço entre o toggle e o texto */
+  margin-top: 16px; /* Ajuste conforme necessário */
+}
+
+.toggle-text {
+  font-size: 16px; /* Ou o tamanho que preferir */
+  white-space: nowrap;
+  font: var(--font-family-flex);
+  color: var(--content-secondary);
+}

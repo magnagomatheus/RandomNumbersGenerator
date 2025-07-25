@@ -8,13 +8,20 @@ body {
     display: flex;
     margin: auto;
     justify-content: center;
+    align-items: center;
+    padding: 50px 100px;
+    width: 100vh;
     height: 100vh;
     font-family: var(--font-family-sora);
     background-color: var(--background-primary);
     color: var(--content-primary);
+
     main {
-        width: 80vh;
+        margin: auto;
+        padding: 0 100px;
     }
+
+    
 }
 
 :root {
@@ -53,7 +60,7 @@ body {
     --paragraph-medium: normal 14px/150% var(--font-family-sora);
     --paragraph-small: normal 12px/150% var(--font-family-sora);
 
-    --label-medium: bold 20px/150% var(--font-family-sora);
-    --label-small: bold 16px/150% var(--font-family-sora);
+    --label-large: bold 20px/150% var(--font-family-sora);
+    --label-medium: bold 16px/150% var(--font-family-sora);
 
 }
