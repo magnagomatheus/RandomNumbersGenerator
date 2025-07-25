@@ -1,0 +1,14 @@
+main div#logo {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 100px 0;
+
+    h3 {
+        padding: 10px;
+        font-weight: bold;
+        color: var(--content-primary);
+    }
+
+}

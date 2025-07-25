@@ -1,0 +1,58 @@
+div#container {
+
+    display: flex;
+    flex-direction: row;
+
+    section#intro {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin: 0px 50px 0px 0px;
+        padding: 0px 50px 0px 0px;
+        width: 508px;
+
+        div#header {
+            h3 {
+                font: var(--overline);
+                color: var(--content-secondary);
+            }
+
+            p {
+                font: var(--display-large);
+            }
+        }
+    }
+
+    section#numberDraw {
+        background-color: rgb(34, 230, 230);
+        margin: 0px 0px 0px 50px;
+        padding: 0px 0px 0px 50px;
+        width: 508px;
+    }
+
+    div.questions {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        gap: 10px;
+
+        img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+        }
+
+        .txt {
+            
+            h4 {
+                color: var(--content-brand);
+            }
+            p {
+                font: var(--paragraph-small);
+                color: var(--content-secondary);
+            }
+        }
+    }
+
+}
