@@ -107,6 +107,7 @@ div#container {
                         text-align: center;
                         padding-left: 15px;
                         font: var(--display-small);
+                        font-style: none;
                         
                     }
                 }
