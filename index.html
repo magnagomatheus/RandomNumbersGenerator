@@ -54,39 +54,41 @@
             </section>
 
             <section id="numberDraw">
-                <div id="infos">
+                <div class="beforeSort">
+                    <div id="infos">
                     <h3>Quero Sortear:</h3>
                     <p>defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                    </div>
+
+                    <form action="">
+                        
+                        <div id="inputs">
+                            <div class="input">
+                                <label for="qtd_numbers">Números</label>
+                                <input type="number" id="qtd_numbers" name="qtd_numbers">
+                            </div>
+
+                            <div class="input">
+                                <label for="from">De</label>
+                                <input type="number" id="from" name="from">
+                            </div>
+
+                            <div class="input">
+                                <label for="to">De</label>
+                                <input type="number" id="to" name="to">
+                            </div>
+                        </div>
+
+                        <div class="toggle-container">
+                            <input type="checkbox" id="toggleSwitch" class="hidden-checkbox">
+                            <label for="toggleSwitch" class="toggle-label"></label>
+                            <span class="toggle-text">Não repetir número</span>
+                        </div>
+            
+                        <button id="btnSort" type="submit">Sortear <span><img src="assets/imgs/right.png" alt=""></span></button>
+
+                    </form>
                 </div>
-
-                <form action="">
-                    
-                    <div id="inputs">
-                        <div class="input">
-                            <label for="qtd_numbers">Números</label>
-                            <input type="number" id="qtd_numbers" name="qtd_numbers">
-                        </div>
-
-                        <div class="input">
-                            <label for="from">De</label>
-                            <input type="number" id="from" name="from">
-                        </div>
-
-                        <div class="input">
-                            <label for="to">De</label>
-                            <input type="number" id="to" name="to">
-                        </div>
-                    </div>
-
-                    <div class="toggle-container">
-                        <input type="checkbox" id="toggleSwitch" class="hidden-checkbox">
-                        <label for="toggleSwitch" class="toggle-label"></label>
-                        <span class="toggle-text">Não repetir número</span>
-                    </div>
-        
-                    <button id="btnSort" type="submit">Sortear <span><img src="assets/imgs/right.png" alt=""></span></button>
-
-                </form>
 
             </section>
         </div>

@@ -3,6 +3,9 @@ const FROM = document.getElementById("from");
 const TO = document.getElementById("to");
 const TOGGLE = document.getElementById("toggleSwitch");
 const FORM = document.querySelector("form");
+const sectionNumberDraw = document.getElementById("numberDraw");
+const divBefore = document.getElementsByClassName("beforeSort");
+const btnAgain = document.createElement("button");
 
 
 let sortedNumbers = [];
@@ -55,9 +58,65 @@ FORM.onsubmit = (event) => {
                 sortedNumbers.push(number);
             }
         }
-        console.log(sortedNumbers);
+        showNumbers();
+        //console.log(sortedNumbers);
     } catch(error) {
         alert("Nao foi possivel sortear os numeros, tente novamente!");
         console.log(error);
     }
 }
+
+function showNumbers() {
+    try 
+    {
+        divBefore[0].classList.add('invisible');
+        const divAfter = document.createElement("div");
+        divAfter.classList.add("afterSort");
+
+        const results = document.createElement("div");
+        results.classList.add("showResults");
+
+        const title = document.createElement("h3");
+        title.textContent = `Os números sorteados foram:`;
+
+        //results.append(title);
+        /*results.innerHTML = 
+        `
+            <h3>Os números sorteados foram:</h3>
+        `;*/
+        console.log("vai comecar o for");
+        for(let i = 0; i < QTDNUM.value; i++) {
+            const numberSorted = sortedNumbers[i];
+            console.log(`Number Sorted ${numberSorted}`);
+            const divNumberSorted = document.createElement("div");
+            divNumberSorted.classList.add("numberSorted");
+            divNumberSorted.innerHTML = `<h2>${numberSorted}</h2>`;
+            results.append(divNumberSorted);
+        }
+        console.log("Terminou o for");
+
+        divAfter.append(title, results, btnAgain);
+
+        btnAgain.textContent = "Sortear novamente?";
+
+        sectionNumberDraw.append(divAfter);
+
+        btnAgain.onclick = () => {
+
+            sectionNumberDraw.removeChild(divAfter);
+            sortedNumbers = [];
+            QTDNUM.value = 0;
+            FROM.value = 0;
+            TO.value = 0;
+            divBefore[0].classList.remove('invisible');
+        }
+        
+    } catch(e) 
+    {
+        alert("Nao foi possivel mostrar o numeros sorteados, tente novamente!");
+        console.log(e);
+    }
+}
+
+//const divAfter = document.getElementsByClassName("afterSort");
+

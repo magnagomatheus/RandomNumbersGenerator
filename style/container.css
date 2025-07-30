@@ -60,58 +60,92 @@ div#container {
 
     section#numberDraw {
         
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        width: 482px;
-        padding-top: 35px;
-
-        div#infos {
-            h3 {
-                font: var(--label-large);
-            }
-            p {
-                font: var(--paragraph-large);
-                color: var(--content-secondary);
-            }
-        }
-
-        form {
+        
+        div.beforeSort {
+            
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 50px;
+            width: 482px;
+            padding-top: 35px;
 
-            div#inputs {
+            div#infos {
+                h3 {
+                    font: var(--label-large);
+                }
+                p {
+                    font: var(--paragraph-large);
+                    color: var(--content-secondary);
+                }
+            }
 
+            form {
                 display: flex;
+                flex-direction: column;
                 gap: 20px;
 
-                div.input {
+                div#inputs {
+
                     display: flex;
-                    flex-direction: column;
-                    width: 20%;
-                    text-align: center;
+                    gap: 20px;
 
-                    label {
-                        font: var(--label-medium);
-                        color: var(--content-secondary);
-                        text-transform: uppercase;
-                    }
-
-                    input {
-                        height: 56px;
-                        background-color: var(--background-secondary);
-                        border: none;
-                        border-radius: 10px;
-                        color: var(--content-primary);
+                    div.input {
+                        display: flex;
+                        flex-direction: column;
+                        width: 20%;
                         text-align: center;
-                        padding-left: 15px;
-                        font: var(--display-small);
-                        font-style: none;
-                        
+
+                        label {
+                            font: var(--label-medium);
+                            color: var(--content-secondary);
+                            text-transform: uppercase;
+                        }
+
+                        input {
+                            height: 56px;
+                            background-color: var(--background-secondary);
+                            border: none;
+                            border-radius: 10px;
+                            color: var(--content-primary);
+                            text-align: center;
+                            padding-left: 15px;
+                            font: var(--display-small);
+                            font-style: none;
+                            
+                        }
                     }
                 }
             }
+        
+        }
+
+        div.afterSort {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding-top: 35px;
+            margin-bottom: 50px;
+
+            h3 {
+                font: var(--display-small);
+                color: var(--content-secondary);
+                font-weight: 900;
+                text-wrap: nowrap;
+            }
+
+            div.showResults {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                text-align: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                div.numberSorted {
+                    font: var(--display-large);
+                    color: var(--content-brand);
+                }
+            }
+            
         }
 
 
@@ -124,6 +158,7 @@ div#container {
             height: 56px;
             font: var(--label-medium);
             color: var(--content-primary);
+            cursor: pointer;
 
             img {
                 position: relative;
